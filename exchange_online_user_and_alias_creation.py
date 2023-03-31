@@ -20,7 +20,7 @@ install_module("csv")
 install_module("subprocess")
 
 # Comprobar si se han proporcionado los argumentos necesarios
-if len(sys.argv) != 4:
+if len(sys.argv) != 5:
     print("Uso: python script.py <admin_email> <password> <user_csv_file> <alias_csv_file>")
     sys.exit(1)
 
