@@ -5,7 +5,13 @@ from office365.directory.directory_object_collection import DirectoryObjectColle
 from office365.directory.user import User
 
 # Instalar la biblioteca office365-python-client
-os.system('pip install office365-python-client')
+def install_module(module_name):
+    try:
+        importlib.import_module(module_name)
+        print(f"{module_name} ya está instalado")
+    except ImportError:
+        print(f"Instalando {module_name}...")
+        os.system(f"python -m pip install {module_name}")
 
 # Conectar a Exchange Online
 client = GraphClient("https://graph.microsoft.com/v1.0", None)
