@@ -3,13 +3,13 @@ Import-Module ExchangeOnlineManagement
 $LiveCred = Get-Credential
 Connect-ExchangeOnline -Credential $LiveCred
 Connect-MsolService -Credential $LiveCred
-Write-Host "Conexión establecida"
+Write-Host "Conexion establecida"
 Pause
 
-# Dar opción de elegir qué acción realizar
-$opcion = Read-Host "¿Qué acción desea realizar? (1: Migrar usuarios, 2: Crear alias, 3: Eliminar usuarios, 4: Asignar licencias)"
+# Dar opcion de elegir qué accion realizar
+$opcion = Read-Host "¿Que accion desea realizar? (1: Migrar usuarios, 2: Crear alias, 3: Eliminar usuarios, 4: Asignar licencias)"
 
-# Realizar acción seleccionada
+# Realizar accion seleccionada
 switch ($opcion) {
     1 {
         # Migrar usuarios
@@ -46,6 +46,6 @@ switch ($opcion) {
         }
     }
     default {
-        Write-Host "Opción inválida, saliendo del script."
+        Write-Host "Opcion invalida, saliendo del script."
     }
 }
